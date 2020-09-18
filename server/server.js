@@ -41,6 +41,10 @@ const middleware = [
 
 middleware.forEach((it) => server.use(it))
 
+server.get('/api/v1/users', (req, res) => {
+  res.send('привет привет')
+})
+
 server.use('/api/', (req, res) => {
   res.status(404)
   res.end()
